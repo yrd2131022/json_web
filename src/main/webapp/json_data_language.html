@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//1.定义基本格式
+	var person = {
+		"name" : "张三",
+		"age" : 23,
+		"gender" : true
+	};
+	
+	console.log(person.name);
+	
+	//获取person对象中所有的键和值
+	//for  in  循环
+	for(var key in person){
+		//这样的方式获取不行。因为相当于  person."name"
+		//alert(key + ":" + person.key);
+		alert(key + ":" + person[key]);
+	}
+	
+	//获取name的值
+	//var name = person.name; //方式1
+	//var name = person["name"]; // 方式2
+	//alert(name);
+
+	//alert(person);
+	//2.嵌套格式  { }  ----->  [ ]
+	var persons = {
+		"persons" : [ {
+			"name" : "张三",
+			"age" : 24,
+			"gender" : true
+		}, {
+			"name" : "王五",
+			"age" : 29,
+			"gender" : true
+		} ]
+	}
+	//alert(person);
+	
+	//var name1 = persons.persons[1].name;
+	//alert(name1);
+
+	//2.嵌套格式  [ ]  ----->  { }
+	var persons = [ {
+		"name" : "张三",
+		"age" : 24,
+		"gender" : true
+	}, {
+		"name" : "王五神兽",
+		"age" : 29,
+		"gender" : true
+	} ]
+	//alert(person);
+	//alert(persons[1].name);
+	for(var i = 0;i<persons.length;i++){
+		var p = persons[i];
+		for(var key in p){
+			alert(key + ":" + p[key]);
+		}
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

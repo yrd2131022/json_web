@@ -1,0 +1,5 @@
+json解析器：Jsonlib,Gson,fastjson(阿里巴巴),jackson(spring)
+java对象转换json:
+步骤：1.导入jackson的相关jar包
+	 2.创建jackson核心对象  ObjectMapper
+	 3.调用ObjectMapper的相关方法进行转换
